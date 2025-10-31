@@ -1,0 +1,154 @@
+   *{
+    /* border-top:10px solid #1098ad; //will be applied to all until n unless they are overriden bcoz universal  selector has the least priority */
+    margin:0;
+    padding:0;
+  } 
+  /* h1,h2,h3,h4,p,li
+  {font-family: sans-serif;
+  color:#444;} */
+  body {
+    color:c#444;
+    font-family: sans-serif;
+    border-top:10px solid #1098ad; /*this is not inherited as it won't be sensible */
+  }
+  .container {
+    width:800px;
+    /* margin-left:auto;
+    margin-right: auto; */
+    margin:0 auto;  /* will do the same work as the above two lines */
+  }
+  .main-header {
+    background-color:#f7f7f7;
+    /* padding: 20px; // will create padding of 20px in all dxns equivalent to setting individual paddings to 20px
+    padding-right: 40px;  
+    padding-left:40px;  */
+     padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for leftand right padding */
+   margin-bottom:60px;
+   height:80px;
+ }
+ nav {
+  font-size: 18px;
+}
+article {
+  margin-bottom:60px;
+}
+ .post-header{
+  margin-bottom: 40px;
+ }
+ aside {
+   background-color:#f7f7f7;
+  border-top:5px solid #1098ad;
+  border-bottom:5px solid #1098ad;
+  padding:50px 0;
+  width:500px;
+ }
+  
+  h1,h2,h3{color: #1098ad;}
+      h1 {
+         
+         font-size 26px;
+         
+         text-transform:uppercase;
+         font-style:italic;
+      }
+      h2 {
+        font-size :40px;
+        margin-bottom:30px;
+        
+      }
+      h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top:40px;
+      }
+       h4 {
+        font-size: 20px;
+      
+        text-transform: uppercase;
+        text-align: center;
+      }
+      p {
+        font-size: 22px;
+        
+        line-height: 1.5;
+        margin-bottom: 15px;
+
+      }
+      ul,ol{
+        margin-left:50px;
+        margin-bottom:20px;
+      }
+      li {
+        
+        font-size: 20px;
+        margin-bottom:10px;
+      }
+      li:last-child                   /*aka pseudo elemnets*/
+      {
+        margin-bottom:0;     /*no need of unit for 0*/
+      }
+      footer p {
+        font-size:16px;
+      }
+    #author
+      {font-style: italic;
+      font-size: 18px;}
+      #copyright {
+        font-size:16px;
+      }
+      .related-author 
+      {
+        font-size: 18px;
+       font-weight: bold;
+      }
+      .related {
+        list-style:none;
+      }
+    
+     /* body{
+      background-color: antiquewhite;     // will change the body of the whole background of ur page
+     } */
+      li:first-child
+      {
+        font-weight: bold;
+      }
+      li:last-child 
+      {
+        font-style:italic;
+      }
+      /* li:nth-child(3)
+      {
+        color:red;     
+      } */
+
+
+       /* article p:first-child
+       {
+        color:red;             //nothing will happen bcoz p is no the first child of the element article but instead header is so basically to use this pseudo classes they must satisfy the class property that means if first child is used then the element must be first child of any parent element
+
+       } */
+
+       /* article p:last-child 
+       {
+        color: red;
+       } */
+       a:link {     /*will only target the anchor classes which have href attribute */
+        color:#1098ad;    
+        text-decoration:none;
+       }
+       a:visited{
+        color:#1098ad;
+       }
+       a:hover {
+        color:orangered;
+        font-weight: bold;
+        text-decoration: underline orangered;
+       }
+       a:active{
+        background-color:black;
+      font-style:italic;
+       }
+       .post-img {
+             width:100%;
+             height:auto;  /*will automatically maintain the height to maintain the same aspect ratio as specified in html page*/
+       }
