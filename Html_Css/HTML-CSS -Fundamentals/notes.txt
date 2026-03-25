@@ -1,0 +1,42 @@
+HTML(Hyper text markup language) is the language understood by the web browser .HTML is called HyperText Markup Language because it uses markup tags to structure hypertext documents that can link to other pages.
+
+Whenever we visit any website by going to it's domain the web browser simply request index.html , style.js , image.jpg , style.css files directly from the web server (if that website is static) and renders it to users end and we see all the data or information available on the website . If website is dynamic then files requested are loaded from the databases (which might get updated with each request) via the backend applications and then loaded back to the web servers then to the web browser .
+
+Html is case insensitive language . 
+
+Element in html refers to tag+content inside it and it is used to describe the content . element if defined inside an element is called the child element and outer element is called parent element.
+
+Tag in html is used to define the type and structure of content .
+
+Everything inside the html or body element must be under a tag . Body element allows text without tags but is displayed as plain text in the web page and it lacks structure and control.
+
+HTML attributes are special properties added to elements to provide additional information or modify their behavior.
+
+You can comment using <!-- comment --> . But u can't write it inside any tag that's a rule like <p <--comment --> > , this is wrong , instead use <p> <!-- comment --> .
+
+The charset attribute should be placed inside the <head> section as early as possible (preferably first element in <head>) because the browser starts decoding immediately.If encoding is declared late, text may already be misread.
+
+Hyperlinks which do not lead to another web page or websites are also called Placeholder links , for example - href="#" . Placeholder links are temporary links used when the real destination URL is not yet available.they allow you to design and test navigation without having actual pages ready.
+
+<nav> is a semantic element (HTML5) which Improves accessibility ,Helps search engines understand site structure ,not required for every group of links , generally used for menus that help users move around the website like - Main site menu ,Top navigation bar ,Sidebar links , Table of contents , Pagination links . Note that it does not bring any visible changes to your webpage .
+
+Semantics means meaning.In HTML, semantic elements clearly describe the purpose of the content they contain.Semantic HTML uses tags that convey the meaning and role of content to browsers, developers, and assistive technologies.Common Semantic Elements (HTML5) are-
+<header> → Intro/top area
+<nav> → Navigation links
+<main> → Main content
+<section> → Thematic section
+<article> → Independent content
+<aside> → Sidebar content
+<footer> → Bottom area
+
+Note that semantics do not bring any visible changes to your webpage but Semantics Matter because - 
+✅ Accessibility ♿
+Screen readers understand page structure
+✅ SEO 🔎
+Search engines index content better
+✅ Maintainability 👨‍💻
+Code becomes easier to read and manage
+✅ Browser Understanding 🌐
+Improves rendering and behavior
+
+<div> is used to group content without any meaning and this a non-semantic element
