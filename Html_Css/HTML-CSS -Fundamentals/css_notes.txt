@@ -1,0 +1,71 @@
+CSS : Cascading Style Sheets
+
+CSS describe the visual style and presentation of the content written in html
+
+CSS also has properties just like html attributes to format the content
+
+A CSS rule(Structure) looks like this:
+selector {
+  property: value;
+  property: value;
+}
+Selector = Which HTML element to style
+🔴 Declaration Block { ... }
+Everything inside the curly braces is called the declaration block.
+{
+  property: value;
+  property: value;
+}
+🟠 Declaration / Style
+Each line inside the block is a declaration (one styling rule).
+ property: value;
+🟡 Property
+Property = What aspect you want to change 
+🟡 Value
+Value = How you want it to look
+example-
+h1 {
+  color: blue;
+  text-align: center;
+  font-size: 20px;c
+  }
+
+There are 3 main ways to write CSS in HTML:
+✅ 1) Inline CSS
+CSS is written directly inside an HTML tag using the style attribute.
+example- <h1 style="color: blue; font-size: 20px;">Hello World</h1>
+🔹 Applies style to only that one element
+🔹 Quick but NOT recommended for large projects
+Use when: Small changes or testing
+
+✅ 2) Internal CSS (Embedded CSS)
+CSS is written inside the <style> tag in the <head> section of the HTML file.
+example - <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1>Hello World</h1>
+</body>
+</html>
+🔹 Applies to the whole page
+🔹 Good for single-page websites
+
+✅ 3) External CSS (Best Method ⭐)
+CSS is written in a separate .css file and linked to the HTML.
+🔹 Can style multiple pages
+🔹 Keeps code clean
+🔹 Most professional and widely used
+Step 1 — Create CSS file (style.css)
+Step 2 — Link it in HTML
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+The external css file can be named anything and there is no hardcore convention like index.html

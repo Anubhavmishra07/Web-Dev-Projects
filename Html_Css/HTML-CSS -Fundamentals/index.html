@@ -5,10 +5,9 @@
     <meta charset="UTF-8" /> <!--The meta tag provides metadata (data about data) information about the webpage, not visible content and thus should be placed inside the head section . It tells browsers, search engines, and other tools how to handle the page. In simple words it contains information about the webpage settings-->
     <!--charset attribute specifies the character encoding of the document,telling the browser to use UTF-8 character encoding to read this page ensuring proper display of text and symbols by the browser . UTF-8 supports almost all characters and emojis in the world .-->
     <title>HTML basics</title>  <!-- defines the name of the webpage shown on the browser tab -->
-    <link href="style.css" rel="stylesheet" />
-   
+    <link href="style.css" rel="stylesheet" /> <!--the link element is used to link the external css file to the html file and it does not have any closing tag and hence needs to end with a / ,Here also href is used to specify the path of the file-->
+   <!-- rel="stylesheet" is an attribute used inside the <link> tag to tell the browser:“This file is a stylesheet (CSS file) used to style the webpage.”Without rel="stylesheet".The browser will NOT apply the CSS, because it doesn’t know what the file is for. -->
   </head>
- 
   <body>    <!--body element contains information or content that is visible on our web page -->
     <div class="container">
       <header class="main-header"> <!--The <header> element represents introductory content or a container for heading information.It usually appears at the top of a page or section.-->
@@ -17,7 +16,7 @@
           <a href="blog.html">Blog</a> <!-- a stands for anchor tag and is used to create hyperlinks-->
           <!-- href attribute is used to link the content inside the anchor element to the provided url or path . Without href attribute the content of the anchor element will simply appear as plain text -->
           <a href="#">challenge</a>
-          <!-- href ="#" is used to create a blank link which does not redirect to anyother page rather it redirects us to the top of the current page .  -->
+          <!-- href ="#" is used to create a blank link which does not redirect to any other page rather it redirects us to the top of the current page .  -->
           <a href="#">Flexbox</a>
           <a href="#">CSS Grid</a>
         </nav>

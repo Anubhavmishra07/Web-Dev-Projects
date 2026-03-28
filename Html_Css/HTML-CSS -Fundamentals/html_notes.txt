@@ -1,8 +1,16 @@
+HTML: HyperText Markup Language
+
 HTML(Hyper text markup language) is the language understood by the web browser .HTML is called HyperText Markup Language because it uses markup tags to structure hypertext documents that can link to other pages.
 
 Whenever we visit any website by going to it's domain the web browser simply request index.html , style.js , image.jpg , style.css files directly from the web server (if that website is static) and renders it to users end and we see all the data or information available on the website . If website is dynamic then files requested are loaded from the databases (which might get updated with each request) via the backend applications and then loaded back to the web servers then to the web browser .
 
 Html is case insensitive language . 
+
+An index.html file is the main (default) webpage of a website. When someone visits a site, the server usually loads index.html first.Most websites use index.html because web servers automatically open index.html by default when someone visits a folder or domain.Therefore , the very main or defualt page of your file must be index.html . If your site URL is:
+www.mysite.com
+Server looks for:
+index.html
+You can use other names apart from index.html like first.html,blog.html,about.html,etc. only for local use or internal pages of a website otherwise homepage won't load if it is hosted online with other names ,for that u need to visit www.mysite.com/first.html instead of www.mysite.com
 
 Element in html refers to tag+content inside it and it is used to describe the content . element if defined inside an element is called the child element and outer element is called parent element.
 

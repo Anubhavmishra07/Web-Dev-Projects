@@ -49,10 +49,8 @@ article {
  }
   
   h1,h2,h3{color: #1098ad;}
-      h1 {
-         
+      h1 { 
          font-size:26px;
-         
          text-transform:uppercase;
          font-style:italic;
       }
@@ -68,14 +66,12 @@ article {
       }
        h4 {
         font-size: 20px;
-      
-        text-transform: uppercase;
+       text-transform: uppercase;  /* use to decide the case of the letters */
         text-align: center;
       }
       p {
         font-size: 22px;
-        
-        line-height: 1.5;
+        line-height: 1.5; /*used to specify the height of the line.Here 1.5 means 1.5 times the font size that means .5 is the spacing used .By defualt,it is 1x times the font size,that is, same as font size*/
         margin-bottom: 15px;
 
       }
