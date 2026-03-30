@@ -69,3 +69,91 @@ Step 2 — Link it in HTML
 </head>
 
 The external css file can be named anything and there is no hardcore convention like index.html
+
+In css we use /* comment */ for commenting single as well as multilines.
+
+The semicolon (;) is compulsory in CSS to end every declaration within a declaration block.
+
+In order to keep html enities or encoding away from css file so that changing html coding doesn't bring changes in css file we use id and classes . This helps us in maintaining the code easily and change in html code won't bring any change to the css file .The difference btwn id and classes is that we are not allowed to repeat id names and thus each id name or value can be used only once but using classes allows us to assign same names to multiple elements .
+
+Using class or id simply eliminates code repeatabilty and allows easy modifications.
+
+A class or property with more than one word is generally separated by a - instead of space in css/html as a convention. 
+
+In real world we always use classes instead of id for versatility or maintainability .
+
+Colors in css can be applied by using rgb(r,g,b) or rgba(r,g,b,transparency value or alpha value) where r,g,b lies from 0 to 250 and aplha value lies from 0 to 1 or hexadecimal notation like #00ffff (which is same as #0ff when color codes are identical pairs)or hsl (hue value,saturation value in %,lightness value in %) ex - (40,100%,50%) .
+
+Hyperlinks are generally styled in LVHA (link,visited,hover,active) order only for proper working of all css.
+
+To resolve conflicting declarations (same property being implemented via different declaration blocks) the following rules (aka Specificity)are used:
+
+i)'!important' is used to force a CSS rule to override all other rules, even if they normally have higher priority.
+ex - selector {
+  property: value !important;
+} hence !important has the highest property but it should not be used bcoz !important overrides everything leading to messy, unstructured CSS and thus harder to modify or extend styles later
+ii) inline style are 2nd highest 
+iii) id(#) selector
+iv) class(.) or pseudo-class(:) selector
+v) element selector (p,div,li,etc.)
+vi) universal selector(*) has the least priority
+if conflict is btwn same selectors than last selector is applied to the element.
+
+Use space-separated class names inside the class attribute to assign multiple classes to one element.
+<p class="class1 class2 class3">Hello World</p> here class1,class2,class3 now act as three separate classes for the same element p 
+<p class="text red bold">This is a paragraph</p>
+.text {
+  font-size: 18px;
+}
+.red {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
+<p class="red" class="bold">Hello</p>
+This is invalid HTML and the browser will usually ignore the first one and only apply the last class ("bold") .
+
+🌿 Inheritance in CSS
+Inheritance means that some CSS properties applied to a parent element are automatically passed down to its child elements. ex- HTML
+<div>
+  <p>Hello World</p>
+</div>
+CSS
+div {
+  color: blue;
+}
+Here the <p> text will become blue, even though we didn’t style <p> directly.
+✅ Properties That Inherit
+Common properties that do inherit are generally text related:
+color
+font-weight
+font-style
+line-height
+letter-spacing
+text-transform
+text-shadow
+list-style
+font-size
+font-family
+text-align
+visibility
+
+⚡Override Inheritance
+Child can override parent style:
+div {
+  color: blue;
+}
+p {
+  color: red;
+}
+<p> will be red, not blue . Note that this is not because of specificity it’s because of direct styling which always overrides inherited values. Inheritance has lower priority than direct declarations.Specificity matters when multiple rules target the SAME element DIRECTLY 
+ex - <p class="text">Hello</p>
+p {
+  color: blue;
+}
+.text {
+  color: red;
+}
+
+Universal selector simply applies to all elements of the webpage and there is no inheritance involved . They can easily be overridden by selectors having higher priority than it .

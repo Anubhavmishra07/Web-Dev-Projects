@@ -1,206 +1,218 @@
-   *{
-    /* border-top:10px solid #1098ad; //will be applied to all until n unless they are overriden bcoz universal  selector has the least priority */
-    margin:0;
-    padding:0;
-  } 
+* {  /* it selects all the elements on a webpage.'*'= “select everything”*/
+  /* border-top:10px solid #1098ad; //will be applied to all until n unless they are overriden by other selectors*/
+  margin: 0;
+  padding: 0;
+}
 
-  /* h1,h2,h3,h4,p,li
+/* h1,h2,h3,h4,p,li
   {font-family: sans-serif;
   color:#444;} */
-  body {
-    color:c#444;
-    font-family: sans-serif;
-    border-top:10px solid #1098ad; /*this is not inherited as it won't be sensible */
-    position: relative;
-  }
-  .container {
-    width:800px;
-    /* margin-left:auto;    //automatically margin will be given
+body {
+  color: c#444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad; /*this is not inherited as it won't be sensible and only applies border at the top of the body element or simply the webpage*/
+  position: relative;
+}
+.container {
+  width: 800px;
+  /* margin-left:auto; automatically margin will be given
     margin-right: auto; */
-    margin:0 auto;  /* will do the same work as the above two lines*/
-    /* position: relative; */
-    /* top: 20px; */
-  } 
-  .main-header {
-    background-color:#f7f7f7;
-    /* padding: 20px; // will create padding of 20px in all dxns equivalent to setting individual paddings to 20px
+  margin: 0 auto; /* will do the same work as the above two lines*/
+  /* position: relative; */
+  /* top: 20px; */
+}
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px; // will create padding of 20px in all dxns equivalent to setting individual paddings to 20px
     padding-right: 40px;  
     padding-left:40px;  */
-     padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for leftand right padding */
-   margin-bottom:60px;
-   /* height:80px; */
- }
- nav {
+  padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for leftand right padding */
+  margin-bottom: 60px;
+  /* height:80px; */
+}
+nav {
   font-size: 18px;
   /* text-align:center; */
 }
 article {
-  margin-bottom:60px;
+  margin-bottom: 60px;
 }
- .post-header{
+.post-header {
   margin-bottom: 40px;
- }
- aside {
-   background-color:#f7f7f7;
-  border-top:5px solid #1098ad;
-  border-bottom:5px solid #1098ad;
-  padding:50px 0;
-  width:500px;
- }
-  
-  h1,h2,h3{color: #1098ad;}
-      h1 { 
-         font-size:26px;
-         text-transform:uppercase;
-         font-style:italic;
-      }
-      h2 {
-        font-size :40px;
-        margin-bottom:30px;
-        
-      }
-      h3 {
-        font-size: 30px;
-        margin-bottom: 20px;
-        margin-top:40px;
-      }
-       h4 {
-        font-size: 20px;
-       text-transform: uppercase;  /* use to decide the case of the letters */
-        text-align: center;
-      }
-      p {
-        font-size: 22px;
-        line-height: 1.5; /*used to specify the height of the line.Here 1.5 means 1.5 times the font size that means .5 is the spacing used .By defualt,it is 1x times the font size,that is, same as font size*/
-        margin-bottom: 15px;
+}
+aside {
+  background-color: #f7f7f7;
+  /*border-top: 5px solid #1098ad; border width style and color inputted at the same time and will be applied to all four borders-top,bottom,right,left*/
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
 
-      }
-      ul,ol{
-        margin-left:50px;
-        margin-bottom:20px;
-      }
-      li {
-        
-        font-size: 20px;
-        margin-bottom:10px;
-      }
-      li:last-child                   /*aka pseudo elemnets*/
-      {
-        margin-bottom:0;     /*no need of unit for 0*/
-      }
-      footer p {
-        font-size:16px;
-      }
-    #author
-      {font-style: italic;
-      font-size: 18px;}
-      #copyright {
-        font-size:16px;
-      }
-      .related-author 
-      {
-        font-size: 18px;
-       font-weight: bold;
-      }
-      .related {
-        list-style:none;
-      }
-    
-     /* body{
-      background-color: antiquewhite;     // will change the body of the whole background of ur page
+h1,
+h2,  /*combining selectors for grouped styling*/
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+ font-style: italic;  /* to italisize the element */
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+h4 {
+  font-size: 20px;
+  text-transform: uppercase; /* use to decide the case of the letters */
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  line-height: 1.5; /*used to specify the height of the line.Here 1.5 means 1.5 times the font size that means .5 is the spacing used .By defualt,it is 1x times the font size,that is, same as font size*/
+  margin-bottom: 15px;
+}
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* footer p { aka descendant selector which will select all p elements inside the footer element
+  font-size: 16px;
+} */
+
+/* article header p { aka as nested descendant selector and will select all the p elements which are inside header element which is inside article element 
+  font-style: italic; 
+} */
+
+ #author {   /* using hash selector aka id selector for styling instead of using the hardcore html elements/encoding.Here id with value equal to author will get selected*/
+  font-style: italic;
+  font-size: 18px;
+}
+#copyright {
+  font-size: 16px;
+}
+ .related-author { /* using . to select class name related-author aka dot slector or class selector */
+  font-size: 18px;
+  font-weight: bold;  /* to italisize the element */
+}
+
+/* ul {
+  list-style:none; will remove all the bullet points from all the unordered lists
+} */
+.related {
+  list-style: none;
+}
+
+/* body{
+      background-color: antiquewhite;  will change the body of the whole background of ur page except the elements where we explicitly gave another background color
      } */
-      li:first-child
-      {
-        font-weight: bold;
-      }
-      li:last-child 
-      {
-        font-style:italic;
-      }
-      /* li:nth-child(3)
+li:first-child { /*it will select all li elements which are first child element of their parent (first child means immedaitely after the parent element this element should be present).Here first-child is aka pseudo class which is basically used to define a special state of an element.Every pseudo class must be written after giving colon : */
+  font-weight: bold;
+}
+li:last-child                   /*aka pseudo elemnets*/ {
+  margin-bottom: 0; /*no need of unit for 0*/
+}
+li:last-child { 
+  font-style: italic;
+}
+/* li:nth-child(3)  // here 3 means 3rd element.We can also use odd,even also li:nth-child(even) which will select all even elements
       {
         color:red;     
       } */
 
-
-       /* article p:first-child
+/* article p:first-child //misconception
        {
-        color:red;             //nothing will happen bcoz p is no the first child of the element article but instead header is so basically to use this pseudo classes they must satisfy the class property that means if first child is used then the element must be first child of any parent element
+        color:red;             //nothing will happen bcoz p is not the first child of the element article but instead header is , so basically to use this pseudo classes they must satisfy the class property that means if first child is used then the element must be first child of any parent element
 
        } */
 
-       /* article p:last-child 
+/* article p:last-child //will select the last p of article element only if that p is the last child of article.
        {
         color: red;
        } */
-       a:link {     /*will only target the anchor classes which have href attribute */
-        color:#1098ad;    
-        text-decoration:none;
-       }
-       a:visited{
-        color:#1098ad;
-       }
-       a:hover {
-        color:orangered;
-        font-weight: bold;
-        text-decoration: underline orangered;
-       }
-       a:active{
-        background-color:black;
-      font-style:italic;
-       }
-       .post-img {
-             width:100%;
-             height:auto;  /*will automatically maintain the height to maintain the same aspect ratio as specified in html page*/
-       }
-       nav a:link{
-            /* background-color: orangered;
+
+/* a{
+  color:#1098ad; all anchor elements will turn skyblue
+} */
+a:link { /*will only target the anchor classes which have href attribute */
+  color: #1098ad;
+  text-decoration: none; /*will remove all the text stylings like underline,bold,etc*/
+}
+a:visited { /*will select only those anchors which have been visited once by the user by clicking on it and have an href attribute*/
+  color: #1098ad;
+}
+a:hover { /*will apply on all anchor elements which are currently being hovered*/
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy orangered; /*here we can assign multiple values too line=underline , style of line = wavy and color of line = orangered */
+}
+a:active { /*all anchor elements which are clicked (till the duration of click only)*/
+  background-color: black;
+  font-style: italic;
+}
+.post-img {
+  width: 100%;
+  height: auto; /*will automatically maintain the height to maintain the same aspect ratio as specified in html page*/
+}
+nav a:link {
+  /* background-color: orangered;
             margin:20px;
             padding: 20px;
             display:block; */
-            margin-right:30px;
-            margin-top: 10px;
-            display: inline-block;
-       }
-       nav a:link:last-child{
-        margin-right:0;
-       
-       }
-        button {
-        font-size:22px;
-        padding:20px;
-        cursor:pointer;
-        position:absolute;
-        /* bottom:0;
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+nav a:link:last-child {
+  margin-right: 0;
+}
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  /* bottom:0;
         left:0; */
-        bottom:50px;
-        right: 50px;
-       } 
-       h1::first-letter {
-        font-style:normal;
-        margin-right:5px;
-       }
-       /* h2::first-letter{
+  bottom: 50px;
+  right: 50px;
+}
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/* h2::first-letter{
         font-size:50px;
        } */
-       /* p::first-line{
+/* p::first-line{
         color:red;
        } */
-        /* h3+p::first-line{ // adjacent sibling concept
+/* h3+p::first-line{ // adjacent sibling concept
           color:red;   //will turn each first line of p element red which are immediate to the next h3 element
         } */
-         h2{
-          position:relative;
-         }
-         h2::before{
-          content:"TOP";
-           background-color: #ffe70e;
-           color:#444;
-           font-size:16px;
-           font-weight:bold;
-           display:inline-block ;
-           padding:5px 10px;
-           position: absolute;
-           top:-10px;
-           right: -25px;
-         }
+h2 {
+  position: relative;
+}
+h2::before {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
