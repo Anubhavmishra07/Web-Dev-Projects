@@ -156,4 +156,47 @@ p {
   color: red;
 }
 
-Universal selector simply applies to all elements of the webpage and there is no inheritance involved . They can easily be overridden by selectors having higher priority than it .
+Universal selector simply applies to all elements of the webpage and there is no inheritance involved . They can easily be overridden by selectors having higher priority than it .It is a good practice to use universal selector as a global reset to the page before starting any styling-
+* {  
+  margin: 0; 
+  padding: 0;  
+}
+
+Background is the content area + padding area of the element.
+
+Either use margin-bottom or use margin-top to create vertical space btwn elements , do not mix of them to avoid any misalignments.
+
+<ul>/<ol> usually have some defualt paddings in order to display the bullet points and numbers .<ul>/<ol> defines list style (bullets or numbers),that is,the bullets and numbers are controlled by the parent list and not by <li>.
+<li> → just represents each list item (content) .
+
+If two margins occupy the same then they aren't added up rather they collapse into each other and the final margin is the larger btwn the two.
+
+'height' and 'width' properties represent the height and width of the element inside the border except the padding . In simple words it is basically the height and widht of the content of the element.We specify these properties of the element in the CSS only instead of the html and in CSS writing unit is mandatory .
+
+The child elements can't be larger or wider than the parent elements .
+
+Block-Level Elements
+>elements are formatted visually  as blocks
+>elements occupy 100% of parent element's width,no matter the amount or size of content 
+
+>elements are stacked vertically by default , one after the another ,meaning they cause line break before and after the element both meaning when a block element appears:
+It starts on a new line (break before) and it forces the next element onto a new line (break after)
+ <p>First paragraph</p>
+ <p>Second paragraph</p>
+ First paragraph
+ Second paragraph
+
+>The box-model applies normally
+ex-body,main,header,footer,section,nav,aside,div,h1-h6,p,ul,ol,li,etc.
+
+Inline Elements
+>causes no line-breaks after or before the element
+>occupies only the space necessary for its content 
+>The box-model applies in a different way:height and widths do not apply even if u see it in the box model
+>Paddings and margins are applied only horizontally(left and right). If u put paddings at top or bottom they they won't push the other elements vertically to fit in and thus vertical padding may overlap nearby content
+ex-a,img,strong,em,button,etc.
+
+With CSS we can make block elements as inline elements 
+display:inline
+and vice versa 
+display:block

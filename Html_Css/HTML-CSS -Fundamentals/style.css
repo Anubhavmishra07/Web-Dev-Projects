@@ -1,9 +1,8 @@
 * {  /* it selects all the elements on a webpage.'*'= “select everything”*/
   /* border-top:10px solid #1098ad; //will be applied to all until n unless they are overriden by other selectors*/
-  margin: 0;
-  padding: 0;
+  margin: 0; /*margin is space btwn element's border and other elements*/
+  padding: 0; /*padding is space btwn element's content and it's border*/
 }
-
 /* h1,h2,h3,h4,p,li
   {font-family: sans-serif;
   color:#444;} */
@@ -15,8 +14,8 @@ body {
 }
 .container {
   width: 800px;
-  /* margin-left:auto; automatically margin will be given
-    margin-right: auto; */
+  /* margin-left:auto   //auto = automatic;
+    margin-right: auto;  automatically margin will be given by the browser and that will be equal to the left margin as it is also set to auto*/
   margin: 0 auto; /* will do the same work as the above two lines*/
   /* position: relative; */
   /* top: 20px; */
@@ -24,11 +23,13 @@ body {
 .main-header {
   background-color: #f7f7f7;
   /* padding: 20px; // will create padding of 20px in all dxns equivalent to setting individual paddings to 20px
-    padding-right: 40px;  
-    padding-left:40px;  */
-  padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for leftand right padding */
+  */
+  padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for left and right padding which is equivalent to setting - padding-right: 40px;  
+  padding-left:40px; 
+  padding-top:20px; 
+  padding-bottom:20px;*/
   margin-bottom: 60px;
-  /* height:80px; */
+  /* height:80px; we usually do not fix the sie of the element bcoz in that case it might not be able to accomodate it's child elements by growing itself,that means the child elements can outgrow the parents height and width which is not desired and does not look good*/
 }
 nav {
   font-size: 18px;
@@ -81,7 +82,7 @@ p {
 }
 ul,
 ol {
-  margin-left: 50px;
+  margin-left: 50px; 
   margin-bottom: 20px;
 }
 li {
@@ -163,8 +164,8 @@ a:active { /*all anchor elements which are clicked (till the duration of click o
   font-style: italic;
 }
 .post-img {
-  width: 100%;
-  height: auto; /*will automatically maintain the height to maintain the same aspect ratio as specified in html page*/
+  width: 100%; /*% of width of the parent container of the element.The size of the image will remain 100% even if we stretch the webpage*/
+  height: auto; /*will automatically maintain the height to maintain the same aspect ratio as specified in html file , if not specified then it will maintain the original aspect ratio of the image as of the source*/
 }
 nav a:link {
   /* background-color: orangered;
