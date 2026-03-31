@@ -194,9 +194,53 @@ Inline Elements
 >occupies only the space necessary for its content 
 >The box-model applies in a different way:height and widths do not apply even if u see it in the box model
 >Paddings and margins are applied only horizontally(left and right). If u put paddings at top or bottom they they won't push the other elements vertically to fit in and thus vertical padding may overlap nearby content
-ex-a,img,strong,em,button,etc.
+ex-a,strong,em,button,etc.
 
 With CSS we can make block elements as inline elements 
 display:inline
 and vice versa 
 display:block
+Note making li elements as inline would remove the bullet points or numbers from it and make them in a single line or paragraph . 
+
+Inline-Block Boxes
+>looks like inline from the outside,behaves like block-level on the inside.
+>occupies only content's space
+>causes no line-breaks
+>box-model applies normally
+ex-img
+In order to set any element to inline-block element we use CSS:
+display: inline-block
+
+Normal flow vs Absolute Positioning -
+
+Normal flow:
+>defualt Positioning
+>elements are said to be "in flow"
+>elements are simply laid out according to their order in the HTML code
+In order to set any element to normal flow we use CSS:
+position:relative
+
+Absolute Positioning:
+>element is removed from normal flow and said to be "out of flow"
+>no impact on surrounding elements,might overlap them
+>we use top,bottom,left or right to offset the element from its relatively positioned container
+In order to set any element to normal flow we use CSS:
+position:absolute
+>By default the absolute positioning is done wrt to the view port or simply from the first view of the webpage .
+>In order to change the absolute position wrt to something else then the element's parent element must be given the property- position:relative; so that the absolute position is decided wrt to that parent element and not the view port.Also,if multiple parents are given the property -position:relative; then the immediate or the closest parent is the deciding factor and others are ignored.
+
+Pseudo Elements -
+These are elements which do not exist in HTMl but we can still select and style them in CSS.A pseudo-element is used to style a specific part of an element or to create virtual elements inside it.Ex-first line or first letter of the paragraph ,etc.
+Pseudo elements are written or selected using two colons (::)in CSS .They are by defualt inline elements.
+
+Adjacent element selector/Adjacent Sibling selector:
+A Sibling element is basically part of the same parent.
+ex - <body>
+<p></p>
+<strong></strong>
+<button></button>
+</body>
+then button,p,strong are all siblings but p and strong are Adjacent siblings and strong and button are also Adjacent siblings. + is used to select adjacent sibling
+ex-p+strong will select all the adjacent strong sibling elements of p element.
+
+For debugging CSS use the inspect dev tool of ur web browser or diffchecker.

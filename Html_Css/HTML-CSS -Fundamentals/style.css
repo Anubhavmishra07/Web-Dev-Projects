@@ -10,7 +10,7 @@ body {
   color: c#444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad; /*this is not inherited as it won't be sensible and only applies border at the top of the body element or simply the webpage*/
-  position: relative;
+  position:relative; /*now wrt to this the absolute positioning will be done*/
 }
 .container {
   width: 800px;
@@ -171,12 +171,12 @@ nav a:link {
   /* background-color: orangered;
             margin:20px;
             padding: 20px;
-            display:block; */
+            display:block; will make the elements block level elements*/
   margin-right: 30px;
   margin-top: 10px;
   display: inline-block;
 }
-nav a:link:last-child {
+nav a:link:last-child { /*chaining of pseudo classes is also allowed*/
   margin-right: 0;
 }
 button {
@@ -185,8 +185,8 @@ button {
   cursor: pointer;
   position: absolute;
   /* bottom:0;
-        left:0; */
-  bottom: 50px;
+        left:0;  these two above lines will make the button stick to the bottom left corner of the webpage */
+  bottom: 50px;/*by defualt these 50px are relative to view port(visible part of the webpage in the browser)*/
   right: 50px;
 }
 h1::first-letter {
@@ -194,19 +194,19 @@ h1::first-letter {
   margin-right: 5px;
 }
 /* h2::first-letter{
-        font-size:50px;
+        font-size:50px; will change the size of T to 50px in the h2 "The Basic..."
        } */
 /* p::first-line{
-        color:red;
+        color:red;//all first lines of the p element will become red
        } */
 /* h3+p::first-line{ // adjacent sibling concept
           color:red;   //will turn each first line of p element red which are immediate to the next h3 element
         } */
 h2 {
-  position: relative;
+  position: relative; /*to position the TOP pseudo element*/
 }
-h2::before {
-  content: "TOP";
+h2::before { /*before or after is used to add pseudo element as a very first child or very last child element respectively wrt to the element that is being selected without the need to code them in html*/
+  content: "TOP"; /*content property is mandatory to specify in after and before pseudo elements though it can be empty strings too*/
   background-color: #ffe70e;
   color: #444;
   font-size: 16px;
@@ -214,6 +214,6 @@ h2::before {
   display: inline-block;
   padding: 5px 10px;
   position: absolute;
-  top: -10px;
+  top: -10px; /*negative value means moving in opposite dxn*/
   right: -25px;
 }

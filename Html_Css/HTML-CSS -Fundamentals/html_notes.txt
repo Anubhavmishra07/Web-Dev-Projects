@@ -48,3 +48,6 @@ Code becomes easier to read and manage
 Improves rendering and behavior
 
 <div> is used to group content without any meaning and this a non-semantic element
+
+Use MDN or stackoverflow.com to read or clarify ur doubts.
+For debugging use any html validator or diffchecker
