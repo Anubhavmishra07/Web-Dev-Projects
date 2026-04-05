@@ -27,7 +27,7 @@ example-
 h1 {
   color: blue;
   text-align: center;
-  font-size: 20px;c
+  font-size: 20px;
   }
 
 There are 3 main ways to write CSS in HTML:
@@ -78,7 +78,7 @@ In order to keep html enities or encoding away from css file so that changing ht
 
 Using class or id simply eliminates code repeatabilty and allows easy modifications.
 
-A class or property with more than one word is generally separated by a - instead of space in css/html as a convention. 
+A single class or property with more than one word is generally separated by a - instead of space in css/html as a convention. 
 
 In real world we always use classes instead of id for versatility or maintainability .
 
@@ -91,7 +91,7 @@ To resolve conflicting declarations (same property being implemented via differe
 i)'!important' is used to force a CSS rule to override all other rules, even if they normally have higher priority.
 ex - selector {
   property: value !important;
-} hence !important has the highest property but it should not be used bcoz !important overrides everything leading to messy, unstructured CSS and thus harder to modify or extend styles later
+} hence !important has the highest property but it should not be used bcoz !important overrides everything ,leading to messy, unstructured CSS and thus harder to modify or extend styles later
 ii) inline style are 2nd highest 
 iii) id(#) selector
 iv) class(.) or pseudo-class(:) selector
@@ -115,7 +115,8 @@ Use space-separated class names inside the class attribute to assign multiple cl
 This is invalid HTML and the browser will usually ignore the first one and only apply the last class ("bold") .
 
 🌿 Inheritance in CSS
-Inheritance means that some CSS properties applied to a parent element are automatically passed down to its child elements. ex- HTML
+Inheritance means that some CSS properties applied to a parent element are automatically passed down to its child elements.
+ex- HTML
 <div>
   <p>Hello World</p>
 </div>
@@ -162,30 +163,26 @@ Universal selector simply applies to all elements of the webpage and there is no
   padding: 0;  
 }
 
-Background is the content area + padding area of the element.
+Background (or Fill area) is the content area + padding+border area of the element.Border is the outer boundry btwn the background and the margin.
 
-Either use margin-bottom or use margin-top to create vertical space btwn elements , do not mix of them to avoid any misalignments.
+Either use margin-bottom or use margin-top to create vertical space btwn elements , do not use mix of them to avoid any misalignments.
 
-<ul>/<ol> usually have some defualt paddings in order to display the bullet points and numbers .<ul>/<ol> defines list style (bullets or numbers),that is,the bullets and numbers are controlled by the parent list and not by <li>.
+<ul>/<ol> usually have some defualt left padding in order to display the bullet points and numbers .<ul>/<ol> defines the list style (bullets or numbers),that is,the bullets and numbers are controlled by the parent list and not by <li>.
 <li> → just represents each list item (content) .
 
 If two margins occupy the same then they aren't added up rather they collapse into each other and the final margin is the larger btwn the two.
 
-'height' and 'width' properties represent the height and width of the element inside the border except the padding . In simple words it is basically the height and widht of the content of the element.We specify these properties of the element in the CSS only instead of the html and in CSS writing unit is mandatory .
-
-The child elements can't be larger or wider than the parent elements .
+'height' and 'width' properties represent the height and width of the element inside the border except the padding ,i.e, content area.We specify these properties of the element in the CSS only instead of the html and in CSS writing unit is mandatory .
 
 Block-Level Elements
->elements are formatted visually  as blocks
+>elements are formatted visually as blocks
 >elements occupy 100% of parent element's width,no matter the amount or size of content 
-
 >elements are stacked vertically by default , one after the another ,meaning they cause line break before and after the element both meaning when a block element appears:
 It starts on a new line (break before) and it forces the next element onto a new line (break after)
  <p>First paragraph</p>
  <p>Second paragraph</p>
  First paragraph
  Second paragraph
-
 >The box-model applies normally
 ex-body,main,header,footer,section,nav,aside,div,h1-h6,p,ul,ol,li,etc.
 
@@ -217,17 +214,24 @@ Normal flow:
 >defualt Positioning
 >elements are said to be "in flow"
 >elements are simply laid out according to their order in the HTML code
+>Each element affects others
 In order to set any element to normal flow we use CSS:
-position:relative
+position: relative; keeps the element in normal flow but allows you to move it slightly without disturbing other elements but might overlap them.
+It also acts as a reference point for absolutely positioned children.
+.box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
 
 Absolute Positioning:
 >element is removed from normal flow and said to be "out of flow"
 >no impact on surrounding elements,might overlap them
 >we use top,bottom,left or right to offset the element from its relatively positioned container
-In order to set any element to normal flow we use CSS:
+In order to set any element to absolute positioning we use CSS:
 position:absolute
 >By default the absolute positioning is done wrt to the view port or simply from the first view of the webpage .
->In order to change the absolute position wrt to something else then the element's parent element must be given the property- position:relative; so that the absolute position is decided wrt to that parent element and not the view port.Also,if multiple parents are given the property -position:relative; then the immediate or the closest parent is the deciding factor and others are ignored.
+>In order to change the absolute position wrt to something else then the element's parent element must be given the property- position:relative; so that the absolute position is decided wrt to that parent element and not the view port.Also,if multiple parents are given the property position:relative; then the immediate or the closest parent is the deciding factor and others are ignored.
 
 Pseudo Elements -
 These are elements which do not exist in HTMl but we can still select and style them in CSS.A pseudo-element is used to style a specific part of an element or to create virtual elements inside it.Ex-first line or first letter of the paragraph ,etc.
@@ -243,4 +247,37 @@ ex - <body>
 then button,p,strong are all siblings but p and strong are Adjacent siblings and strong and button are also Adjacent siblings. + is used to select adjacent sibling
 ex-p+strong will select all the adjacent strong sibling elements of p element.
 
+To select multiple pseudo classes u can use 
+.class:pseudo class,:pseudo class,:pseudo class{
+}
+example-.information:link,:visited{
+
+}
+
 For debugging CSS use the inspect dev tool of ur web browser or diffchecker.
+
+A layout is the way elements are arranged and positioned on a webpage.In CSS, layouts are mainly built using three core techniques. Each one evolved over time, so they differ in flexibility and use cases-
+
+1. Float Layout (Old School)
+2. Flexbox (Modern 1D Layout)
+3. CSS Grid (Modern 2D Layout)
+
+Float vs absolute positioning -
+
+>element in both cases becomes "out of flow"
+>absolute positioninghas no impact on surrounding elements,might overlap them but in case of floats text and inline elements will wrap around the floated element
+>In absolute positioningwe use top,bottom,left,right to offset the element from its relatively positioned container but in float the container will not adjust its height to the element and the height might collapse .
+float:left; // to float element leftwards of the page
+float:right; // to float element rightwards of the page
+>floats are not used in modern css .
+
+The box-model with box-sizing:border-box - 
+To change the defualt behaviour of the box model we use 
+box-sizing:border-box; and by doing so we now define height and width as follows-
+final element width = total width including border and padding also
+final element height = total height including border and padding also
+After this if we specify the padding and border then that wil reduce the content area of the box
+In practical world this property is used everywhere 
+
+Flexbox (Modern 1D Layout)
+

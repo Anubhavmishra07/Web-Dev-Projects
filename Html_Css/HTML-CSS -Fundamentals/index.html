@@ -1,137 +1,129 @@
+<!doctype html>
+<!-- !DOCTYPE tells the web browser that this file uses which version of HTML(here HTML5) the page uses -->
+<html lang="en">
+<!-- lang attribute tells the browser and tools like screen reader,translation tools , etc. that the page language is English (en is code for english , de is code for german ,etc.) -->
 
-<!doctype html>  <!-- !DOCTYPE tells the web browser that this file uses which version of HTML(here HTML5) the page uses -->
-<html lang="en"> <!-- lang attribute tells the browser and tools like screen reader,translation tools , etc. that the page language is English (en is code for english , de is code for german ,etc.) -->
-  <head>                            <!-- head element contains Brain/settings of the webpage like metadata, links to styles, scripts, title, etc. which are not visible/displayed on your web page -->
-    <meta charset="UTF-8" /> <!--The meta tag provides metadata (data about data) information about the webpage, not visible content and thus should be placed inside the head section . It tells browsers, search engines, and other tools how to handle the page. In simple words it contains information about the webpage settings-->
-    <!--charset attribute specifies the character encoding of the document,telling the browser to use UTF-8 character encoding to read this page ensuring proper display of text and symbols by the browser . UTF-8 supports almost all characters and emojis in the world .-->
-    <title>HTML basics</title>  <!-- defines the name of the webpage shown on the browser tab -->
-    <link href="style.css" rel="stylesheet" /> <!--the link element is used to link the external css file to the html file and it does not have any closing tag and hence needs to end with a / ,Here also href is used to specify the path of the file-->
-   <!-- rel="stylesheet" is an attribute used inside the <link> tag to tell the browser:“This file is a stylesheet (CSS file) used to style the webpage.”Without rel="stylesheet".The browser will NOT apply the CSS, because it doesn’t know what the file is for. -->
-  </head>
-  <body>    <!--body element contains information or content that is visible on our web page -->
-    <div class="container">
-      <header class="main-header"> <!--The <header> element represents introductory content or a container for heading information.It usually appears at the top of a page or section.-->
-       <h1>📘 The Code Magazine</h1>   <!-- use to create different sized heading using h1,h2...h6 -->
-         <nav> <!--The <nav> element defines a section that contains navigation links. -->
-          <a href="blog.html">Blog</a> <!-- a stands for anchor tag and is used to create hyperlinks-->
-          <!-- href attribute is used to link the content inside the anchor element to the provided url or path . Without href attribute the content of the anchor element will simply appear as plain text -->
-          <a href="#">challenge</a>
-          <!-- href ="#" is used to create a blank link which does not redirect to any other page rather it redirects us to the top of the current page .  -->
-          <a href="#">Flexbox</a>
-          <a href="#">CSS Grid</a>
-        </nav>
+<head>
+  <!-- head element contains Brain/settings of the webpage like metadata, links to styles, scripts, title, etc. which are not visible/displayed on your web page -->
+  <meta charset="UTF-8" />
+  <!--The meta tag provides metadata (data about data) information about the webpage, not visible content and thus should be placed inside the head section . It tells browsers, search engines, and other tools how to handle the page. In simple words it contains information about the webpage settings-->
+  <!--charset attribute specifies the character encoding of the document,telling the browser to use UTF-8 character encoding to read this page ensuring proper display of text and symbols by the browser . UTF-8 supports almost all characters and emojis in the world .-->
+  <title>HTML basics</title> <!-- defines the name of the webpage shown on the browser tab -->
+  <link href="style.css" rel="stylesheet" />
+  <!--the link element is used to link the external css file to the html file and it does not have any closing tag and hence needs to end with a / .Here also href is used to specify the path of the file-->
+  <!-- rel="stylesheet" is an attribute used inside the <link> tag to tell the browser:“This file is a stylesheet (CSS file) used to style the webpage.”Without rel="stylesheet".The browser will NOT apply the CSS, because it doesn’t know what the file is for. -->
+</head>
+
+<body> <!--body element contains information or content that is visible on our web page -->
+  <div class="container"> <!-- div is used to group content without any meaning-->      
+    <header class="main-header clearfix">
+      <!--The <header> element represents introductory content or a container for heading information.It usually appears at the top of a page or section.-->
+      <h1>📘 The Code Magazine</h1> <!-- use to create different sized heading using h1,h2...h6 -->
+      <nav> <!--The <nav> element defines a section that contains navigation links. -->
+        <a href="blog.html">Blog</a> <!-- a stands for anchor tag and is used to create hyperlinks-->
+        <!-- href attribute is used to link the content inside the anchor element to the provided url or path . Without href attribute the content of the anchor element will simply appear as plain text -->
+        <a href="#">challenge</a>
+        <!-- href ="#" is used to create a blank link which does not redirect to any other page rather it redirects us to the top of the current page .  -->
+        <a href="#">Flexbox</a>
+        <a href="#">CSS Grid</a>
+      </nav>
+      <!-- <div class="clear"></div> to clear floats and fix height problems-->
+    </header>
+    <article>
+      <!--The <article> element represents a self-contained piece of content that can stand on its own.Use it for content that is ,Independent,Reusable , Complete by itself-->
+      <header class="post-header">
+        <h2>The Basic Language of the Web: HTML</h2>
+        <img src="img/laura-jones.jpg" width="50" height="50" alt="laura jones image" class="author-img"/>
+        <!-- img element is used to display images and it does not have any content and closing tag and ends with a / -->
+        <!-- src (source) attribute is used to specify the source or path of the image from where the browser should read the image-->
+        <!-- height and width attributes are used to specify height and width respectively ,in term of pixels by defualt if no unit is provided-->
+        <!--alt (alternative text) attribute is used to describe a text as an alternative to the image and let the web browser know what is the image about , if the image for any reason could be displayed then alternative text is displayed -->
+
+        <p id="author" class="author">
+          <!-- p element is used to write paragraphs and it automatically starts on a new line and adds space before and after the paragraph-->
+          <!-- a paragraph can only begin with a new paragraph if it starts with another p tag -->
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+          <!-- strong tag is used to bold the letters of the content inside it -->
+        </p>
+        <img src="img/post-img.jpg" alt="HTML code on a screen" width="500" height="200" class="post-img" />
+        <button>❤️Like</button>
       </header>
-      <article> <!--The <article> element represents a self-contained piece of content that can stand on its own.Use it for content that is ,Independent,Reusable , Complete by itself-->
-        <header class="post-header">
-          <h2>The Basic Language of the Web: HTML</h2>
-         
-          <img   
-            src="img/laura-jones.jpg" 
-            width="50"
-            height="50"
-            alt="laura jones image"
-            />  <!-- img element is used to display images and it does not have any content and closing tag and ends with a / -->  
-<!-- src (source) attribute is used to specify the source or path of the image from where the browser should read the image-->
- <!-- height and width attributes are used to specify height and width respectively ,in term of pixels by defualt if no unit is provided-->
-<!--alt (alternative text) attribute is used to describe a text as an alternative to the image and let the web browser know what is the image about , if the image for any reason could be displayed then alternative text is displayed -->
+      <p>
+        All modern websites and web applications are built using three
+        <em>fundamental</em> <!-- em means emphasize and is used to italisize the content inside it-->
+        technologies: HTML, CSS and JavaScript. These are the languages of the
+        web.
+      </p>
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all
+        about, and why you too should learn it.
+      </p>
+      <h3>What is HTML?</h3>
+      <p>
+        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+        language that web developers use to structure and describe the content
+        of a webpage (not a programming language).
+      </p>
+      <p>
+        HTML consists of elements that describe different types of content:
+        paragraphs, links, headings, images, video, etc. Web browsers
+        understand HTML and render HTML code as websites.
+      </p>
+      <p>In HTML, each element is made up of 3 parts:</p>
+      <ol> <!-- ol element is used to create ordered list meaning list with numbers-->
+        <li>The opening tag</li> <!-- li element means list item and is used for sequencing of the list-->
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+      <p>
+        You can learn more at the
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs.</a>
+        <!-- target attribute is used to open hyperlinks in new tab else they open in the same current tab-->
 
-           <p id="author">   <!-- p element is used to write paragraphs and it automatically starts on a new line and adds space before and after the paragraph-->
-            <!-- a paragraph can only begin with a new paragraph if it starts with another p tag -->
-            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027  <!-- strong tag is used to bold the letters of the content inside it -->
-          </p>
-          <img
-            src="img/post-img.jpg"
-            alt="HTML code on a screen"
-            width="500"
-            height="200"
-            class="post-img"
-          />
-          <button>❤️Like</button>
-        </header>
-        <p>
-          All modern websites and web applications are built using three
-          <em>fundamental</em>  <!-- em means emphasize and is used to italisize the content inside it-->
-          technologies: HTML, CSS and JavaScript. These are the languages of the
-          web.
-        </p>
-        <p>
-          In this post, let's focus on HTML. We will learn what HTML is all
-          about, and why you too should learn it.
-        </p>
-        <h3>What is HTML?</h3>
-        <p>
-          HTML stands for <strong>H</strong>yper<strong>T</strong>ext
-          <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
-          language that web developers use to structure and describe the content
-          of a webpage (not a programming language).
-        </p>
-        <p>
-          HTML consists of elements that describe different types of content:
-          paragraphs, links, headings, images, video, etc. Web browsers
-          understand HTML and render HTML code as websites.
-        </p>
-        <p>In HTML, each element is made up of 3 parts:</p>
-        <ol> <!-- ol element is used to create ordered list meaning list with numbers-->
-          <li>The opening tag</li> <!-- li element means list item and is used for sequencing of the list-->
-          <li>The closing tag</li>
-          <li>The actual element</li>
-        </ol>
-        <p>
-          You can learn more at the
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-            target="_blank"
-            >MDN Web Docs.</a
-          > <!-- target attribute is used to open hyperlinks in new tab else they open in the same current tab-->
-          
-        </p>
-        <h3>Why should you learn HTML?</h3>
+      </p>
+      <h3>Why should you learn HTML?</h3>
 
-        <p>
-          There are countless reasons for learning the fundamental language of
-          the web. Here are 5 of them:
-        </p>
-        <ul> <!-- ul element is used to create unordered list meaning list with bullets-->
-          <li>To be able to use the fundamental web dev language</li>
-          <li>
-            To hand-craft beautiful websites instead of relying on tools like
-            Worpress or Wix
-          </li>
-          <li>To build web applications</li>
-          <li>To impress friends</li>
-          <li>To have fun 😃</li>
-        </ul>
-        <p>Hopefully you learned something new here. See you next time!</p>
-      </article>
-       <aside> <!--The <aside> element represents content that is related to the main content but not part of it.Think of it as a sidebar or supplementary information. -->
-        <h4>Related posts</h4>
-        <ul class="related">
-          <li>
-            <img src="img/related-1.jpg" height="75" width="75" alt="img" /><a
-              href="#"
-              >How to Learn Web Dev</a
-            >
-            <p class="related-author">By Jonas Schmedtmann</p>
-          </li>
-          <li>
-            <img src="img/related-2.jpg" height="75" width="75" alt="img" /><a
-              href="#"
-              >The Unknown Powers of CSS</a
-            >
-            <p class="related-author">By Jim Dillon</p>
-          </li>
-          <li>
-            <img src="img/related-3.jpg" height="75" width="75" alt="img" /><a
-              href="#"
-              >Why JavaScript is Awesome</a
-            >
-            <p class="related-author">By Matilda</p>
-          </li>
-        </ul>
-      </aside>
-     <footer> <!-- The <footer> element represents the bottom section of a page or a section.It usually contains information about the page, author, or related links. -->
-        <p id="copyright">Copyright &copy; 2027 by The Code Magazine</p> <!--html entities like &copy are used to give symbols.Here © this symbol is generated by &copy-->
-      </footer>
-    </div>
-  </body>
+      <p>
+        There are countless reasons for learning the fundamental language of
+        the web. Here are 5 of them:
+      </p>
+      <ul> <!-- ul element is used to create unordered list meaning list with bullets-->
+        <li>To be able to use the fundamental web dev language</li>
+        <li>
+          To hand-craft beautiful websites instead of relying on tools like
+          Worpress or Wix
+        </li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun 😃</li>
+      </ul>
+      <p>Hopefully you learned something new here. See you next time!</p>
+    </article>
+    <aside>
+      <!--The <aside> element represents content that is related to the main content but not part of it.Think of it as a sidebar or supplementary information. -->
+      <h4>Related posts</h4>
+      <ul class="related">
+        <li>
+          <img src="img/related-1.jpg" height="75" width="75" alt="img" /><a href="#">How to Learn Web Dev</a>
+          <p class="related-author">By Jonas Schmedtmann</p>
+        </li>
+        <li>
+          <img src="img/related-2.jpg" height="75" width="75" alt="img" /><a href="#">The Unknown Powers of CSS</a>
+          <p class="related-author">By Jim Dillon</p>
+        </li>
+        <li>
+          <img src="img/related-3.jpg" height="75" width="75" alt="img" /><a href="#">Why JavaScript is Awesome</a>
+          <p class="related-author">By Matilda</p>
+        </li>
+      </ul>
+    </aside>
+    <footer>
+      <!-- The <footer> element represents the bottom section of a page or a section.It usually contains information about the page, author, or related links. -->
+      <p id="copyright">Copyright &copy; 2027 by The Code Magazine</p>
+      <!--html entities like &copy are used to give symbols.Here © this symbol is generated by &copy-->
+    </footer>
+  </div>
+</body>
+
 </html>

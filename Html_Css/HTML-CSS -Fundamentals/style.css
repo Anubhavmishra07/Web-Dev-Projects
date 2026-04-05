@@ -2,6 +2,7 @@
   /* border-top:10px solid #1098ad; //will be applied to all until n unless they are overriden by other selectors*/
   margin: 0; /*margin is space btwn element's border and other elements*/
   padding: 0; /*padding is space btwn element's content and it's border*/
+  box-sizing: border-box; /*changing the defualt behaviour of box model for every element*/
 }
 /* h1,h2,h3,h4,p,li
   {font-family: sans-serif;
@@ -10,10 +11,10 @@ body {
   color: c#444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad; /*this is not inherited as it won't be sensible and only applies border at the top of the body element or simply the webpage*/
-  position:relative; /*now wrt to this the absolute positioning will be done*/
+  position:relative; /*now wrt to this the absolute positioning can be done*/
 }
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left:auto   //auto = automatic;
     margin-right: auto;  automatically margin will be given by the browser and that will be equal to the left margin as it is also set to auto*/
   margin: 0 auto; /* will do the same work as the above two lines*/
@@ -24,12 +25,13 @@ body {
   background-color: #f7f7f7;
   /* padding: 20px; // will create padding of 20px in all dxns equivalent to setting individual paddings to 20px
   */
-  padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for left and right padding which is equivalent to setting - padding-right: 40px;  
+  padding: 20px 40px; /*left value of 20px for top and bottom padding and right value of 40px is for left and right padding which is equivalent to setting - 
+  padding-right: 40px;  
   padding-left:40px; 
   padding-top:20px; 
   padding-bottom:20px;*/
   margin-bottom: 60px;
-  /* height:80px; we usually do not fix the sie of the element bcoz in that case it might not be able to accomodate it's child elements by growing itself,that means the child elements can outgrow the parents height and width which is not desired and does not look good*/
+  /* height:80px; we usually do not fix the size of the element bcoz in that case it might not be able to accommodate it's child elements by growing itself,that means the child elements can outgrow the parents height and width which is not desired and does not look good*/
 }
 nav {
   font-size: 18px;
@@ -43,19 +45,18 @@ article {
 }
 aside {
   background-color: #f7f7f7;
-  /*border-top: 5px solid #1098ad; border width style and color inputted at the same time and will be applied to all four borders-top,bottom,right,left*/
+  /*border: 5px solid #1098ad; border width style and color inputted at the same time and will be applied to all four borders-top,bottom,right,left*/
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
+ 
+ 
 }
-
 h1,
 h2,  /*combining selectors for grouped styling*/
 h3 {
   color: #1098ad;
 }
-
 h1 {
   font-size: 26px;
   text-transform: uppercase;
@@ -74,10 +75,12 @@ h4 {
   font-size: 20px;
   text-transform: uppercase; /* use to decide the case of the letters */
   text-align: center;
+  margin-bottom: 30px;
 }
 p {
   font-size: 22px;
-  line-height: 1.5; /*used to specify the height of the line.Here 1.5 means 1.5 times the font size that means .5 is the spacing used .By defualt,it is 1x times the font size,that is, same as font size*/
+  line-height: 1.5; /*used to specify the height of the line.Here 1.5 means 1.5 times the font size that means 
+  .5 is the spacing used .By defualt,it is 1x times the font size,that is, same as font size*/
   margin-bottom: 15px;
 }
 ul,
@@ -98,7 +101,7 @@ li {
 } */
 
  #author {   /* using hash selector aka id selector for styling instead of using the hardcore html elements/encoding.Here id with value equal to author will get selected*/
-  font-style: italic;
+  font-style: italic; /* to italicize the element */
   font-size: 18px;
 }
 #copyright {
@@ -106,7 +109,7 @@ li {
 }
  .related-author { /* using . to select class name related-author aka dot slector or class selector */
   font-size: 18px;
-  font-weight: bold;  /* to italisize the element */
+  font-weight:bold;  /* to bold the element */
 }
 
 /* ul {
@@ -114,15 +117,16 @@ li {
 } */
 .related {
   list-style: none;
+  margin-left:0;
 }
 
 /* body{
       background-color: antiquewhite;  will change the body of the whole background of ur page except the elements where we explicitly gave another background color
      } */
-li:first-child { /*it will select all li elements which are first child element of their parent (first child means immedaitely after the parent element this element should be present).Here first-child is aka pseudo class which is basically used to define a special state of an element.Every pseudo class must be written after giving colon : */
+li:first-child { /*it will select all li elements which are first child element of their parent (first child means immedaitely after the parent element this element should be present or u can say it as li as a first child).Here first-child is aka pseudo class which is basically used to define a special state of an element.Every pseudo class must be written after giving colon : */
   font-weight: bold;
 }
-li:last-child                   /*aka pseudo elemnets*/ {
+li:last-child                   /*select li if it is a last element of it's parent*/ {
   margin-bottom: 0; /*no need of unit for 0*/
 }
 li:last-child { 
@@ -136,7 +140,6 @@ li:last-child {
 /* article p:first-child //misconception
        {
         color:red;             //nothing will happen bcoz p is not the first child of the element article but instead header is , so basically to use this pseudo classes they must satisfy the class property that means if first child is used then the element must be first child of any parent element
-
        } */
 
 /* article p:last-child //will select the last p of article element only if that p is the last child of article.
@@ -162,6 +165,7 @@ a:hover { /*will apply on all anchor elements which are currently being hovered*
 a:active { /*all anchor elements which are clicked (till the duration of click only)*/
   background-color: black;
   font-style: italic;
+
 }
 .post-img {
   width: 100%; /*% of width of the parent container of the element.The size of the image will remain 100% even if we stretch the webpage*/
@@ -186,12 +190,12 @@ button {
   position: absolute;
   /* bottom:0;
         left:0;  these two above lines will make the button stick to the bottom left corner of the webpage */
-  bottom: 50px;/*by defualt these 50px are relative to view port(visible part of the webpage in the browser)*/
+  bottom: 50px;/*by defualt these 50px are relative to view port(visible part of the webpage in the browser) and if position relative is set to any of it's parent then that parent is selected for reference */
   right: 50px;
 }
 h1::first-letter {
-  font-style: normal;
-  margin-right: 5px;
+  font-style:normal;
+  margin-right:5px;
 }
 /* h2::first-letter{
         font-size:50px; will change the size of T to 50px in the h2 "The Basic..."
@@ -216,4 +220,41 @@ h2::before { /*before or after is used to add pseudo element as a very first chi
   position: absolute;
   top: -10px; /*negative value means moving in opposite dxn*/
   right: -25px;
+}
+
+/*Layouts*/
+.author-img
+{
+  float:left; /*the element will go out of flow and all the other elements will float around it.It will seem to act as if the elements is not even in the page.*/
+}
+.author{
+  /* padding-left:80px; */
+  float:left;
+  margin-top:10px;
+  margin-left:20px;
+}
+h1{
+  float:left;
+}
+nav{
+  float:right;
+}
+/* .clear{
+  clear:both; will clear both right and left floats for the selected element and thus the element will become in flow
+} */
+.clearfix:after{ /*to fix floats we add pseudo elements which will work same as div that we had created*/
+  clear:both; 
+  content:"";
+  display: block; /*bcoz clearing floats only work on block elements*/
+} 
+article{
+  width:825px;
+  float:left;
+}
+aside{
+  width:300px;
+  float:right;
+}
+footer{
+  clear:both;
 }

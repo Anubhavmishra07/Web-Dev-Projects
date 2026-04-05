@@ -12,7 +12,7 @@ Server looks for:
 index.html
 You can use other names apart from index.html like first.html,blog.html,about.html,etc. only for local use or internal pages of a website otherwise homepage won't load if it is hosted online with other names ,for that u need to visit www.mysite.com/first.html instead of www.mysite.com
 
-Element in html refers to tag+content inside it and it is used to describe the content . element if defined inside an element is called the child element and outer element is called parent element.
+Element in html refers to tag+content inside it and it is used to describe the content . Element if defined inside an element is called the child element and outer element is called parent element.
 
 Tag in html is used to define the type and structure of content .
 
@@ -24,15 +24,15 @@ You can comment using <!-- comment --> . But u can't write it inside any tag tha
 
 The charset attribute should be placed inside the <head> section as early as possible (preferably first element in <head>) because the browser starts decoding immediately.If encoding is declared late, text may already be misread.
 
-Hyperlinks which do not lead to another web page or websites are also called Placeholder links , for example - href="#" . Placeholder links are temporary links used when the real destination URL is not yet available.they allow you to design and test navigation without having actual pages ready.
+Hyperlinks which do not lead to another web page or websites are also called Placeholder links , for example - href="#" . Placeholder links are temporary links used when the real destination URL is not yet available,they allow you to design and test navigation without having actual pages ready.
 
-<nav> is a semantic element (HTML5) which Improves accessibility ,Helps search engines understand site structure ,not required for every group of links , generally used for menus that help users move around the website like - Main site menu ,Top navigation bar ,Sidebar links , Table of contents , Pagination links . Note that it does not bring any visible changes to your webpage .
+<nav> is a semantic element (HTML5) which Improves accessibility ,helps search engines understand site structure ,not required for every group of links , generally used for menus that help users move around the website like - Main site menu ,Top navigation bar ,Sidebar links , Table of contents , Pagination links . Note that it does not bring any visible changes to your webpage .
 
 Semantics means meaning.In HTML, semantic elements clearly describe the purpose of the content they contain.Semantic HTML uses tags that convey the meaning and role of content to browsers, developers, and assistive technologies.Common Semantic Elements (HTML5) are-
 <header> → Intro/top area
 <nav> → Navigation links
 <main> → Main content
-<section> → Thematic section
+<section> → Thematic(having or relating to subjects or a particular subject) section
 <article> → Independent content
 <aside> → Sidebar content
 <footer> → Bottom area
@@ -50,4 +50,17 @@ Improves rendering and behavior
 <div> is used to group content without any meaning and this a non-semantic element
 
 Use MDN or stackoverflow.com to read or clarify ur doubts.
-For debugging use any html validator or diffchecker
+For debugging use any html validator or diffchecker.
+
+If u type lorem/Lorem and hit enter them a bunch of text is added(2-3 lines) which can be used for testing purposes.
+Similarly , if u press ! and hit enter then automatically the entire basic structure of the web page is generated.
+!+enter=       <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>  
+          </body>
+          </html>
