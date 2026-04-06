@@ -70,7 +70,7 @@ Step 2 — Link it in HTML
 
 The external css file can be named anything and there is no hardcore convention like index.html
 
-In css we use /* comment */ for commenting single as well as multilines.
+In css we use /* comment */ for commenting single as well as multilines.But note that nested comments are not allowed
 
 The semicolon (;) is compulsory in CSS to end every declaration within a declaration block.
 
@@ -280,4 +280,9 @@ After this if we specify the padding and border then that wil reduce the content
 In practical world this property is used everywhere 
 
 Flexbox (Modern 1D Layout)
+>elements take exactly the space they need until and unless height is specified.
+>u should only put those elements under flex container whom u want to flexbox else the page might get disoriented.
+For this u might need to create extra classes.
 
+CSS Grids:
+>The rows and columns for which we define the height and widht are called as explicit rows and columns and rest are called implicit rows and columns.

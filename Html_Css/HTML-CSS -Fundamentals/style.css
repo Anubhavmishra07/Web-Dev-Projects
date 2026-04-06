@@ -1,4 +1,5 @@
-* {  /* it selects all the elements on a webpage.'*'= “select everything”*/
+* {
+  /* it selects all the elements on a webpage.'*'= “select everything”*/
   /* border-top:10px solid #1098ad; //will be applied to all until n unless they are overriden by other selectors*/
   margin: 0; /*margin is space btwn element's border and other elements*/
   padding: 0; /*padding is space btwn element's content and it's border*/
@@ -11,7 +12,7 @@ body {
   color: c#444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad; /*this is not inherited as it won't be sensible and only applies border at the top of the body element or simply the webpage*/
-  position:relative; /*now wrt to this the absolute positioning can be done*/
+  position: relative; /*now wrt to this the absolute positioning can be done*/
 }
 .container {
   width: 1200px;
@@ -30,16 +31,16 @@ body {
   padding-left:40px; 
   padding-top:20px; 
   padding-bottom:20px;*/
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height:80px; we usually do not fix the size of the element bcoz in that case it might not be able to accommodate it's child elements by growing itself,that means the child elements can outgrow the parents height and width which is not desired and does not look good*/
 }
 nav {
   font-size: 18px;
   /* text-align:center; */
 }
-article {
+/* article {
   margin-bottom: 60px;
-}
+} */
 .post-header {
   margin-bottom: 40px;
 }
@@ -49,8 +50,6 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   padding: 50px 40px;
- 
- 
 }
 h1,
 h2,  /*combining selectors for grouped styling*/
@@ -60,7 +59,7 @@ h3 {
 h1 {
   font-size: 26px;
   text-transform: uppercase;
- font-style: italic;  /* to italisize the element */
+  font-style: italic; /* to italisize the element */
 }
 h2 {
   font-size: 40px;
@@ -85,7 +84,7 @@ p {
 }
 ul,
 ol {
-  margin-left: 50px; 
+  margin-left: 50px;
   margin-bottom: 20px;
 }
 li {
@@ -100,16 +99,18 @@ li {
   font-style: italic; 
 } */
 
- #author {   /* using hash selector aka id selector for styling instead of using the hardcore html elements/encoding.Here id with value equal to author will get selected*/
+#author {
+  /* using hash selector aka id selector for styling instead of using the hardcore html elements/encoding.Here id with value equal to author will get selected*/
   font-style: italic; /* to italicize the element */
   font-size: 18px;
 }
 #copyright {
   font-size: 16px;
 }
- .related-author { /* using . to select class name related-author aka dot slector or class selector */
+.related-author {
+  /* using . to select class name related-author aka dot slector or class selector */
   font-size: 18px;
-  font-weight:bold;  /* to bold the element */
+  font-weight: bold; /* to bold the element */
 }
 
 /* ul {
@@ -117,19 +118,20 @@ li {
 } */
 .related {
   list-style: none;
-  margin-left:0;
+  margin-left: 0;
 }
 
 /* body{
       background-color: antiquewhite;  will change the body of the whole background of ur page except the elements where we explicitly gave another background color
      } */
-li:first-child { /*it will select all li elements which are first child element of their parent (first child means immedaitely after the parent element this element should be present or u can say it as li as a first child).Here first-child is aka pseudo class which is basically used to define a special state of an element.Every pseudo class must be written after giving colon : */
+li:first-child {
+  /*it will select all li elements which are first child element of their parent (first child means immedaitely after the parent element this element should be present or u can say it as li as a first child).Here first-child is aka pseudo class which is basically used to define a special state of an element.Every pseudo class must be written after giving colon : */
   font-weight: bold;
 }
 li:last-child                   /*select li if it is a last element of it's parent*/ {
   margin-bottom: 0; /*no need of unit for 0*/
 }
-li:last-child { 
+li:last-child {
   font-style: italic;
 }
 /* li:nth-child(3)  // here 3 means 3rd element.We can also use odd,even also li:nth-child(even) which will select all even elements
@@ -150,22 +152,25 @@ li:last-child {
 /* a{
   color:#1098ad; all anchor elements will turn skyblue
 } */
-a:link { /*will only target the anchor classes which have href attribute */
+a:link {
+  /*will only target the anchor classes which have href attribute */
   color: #1098ad;
   text-decoration: none; /*will remove all the text stylings like underline,bold,etc*/
 }
-a:visited { /*will select only those anchors which have been visited once by the user by clicking on it and have an href attribute*/
+a:visited {
+  /*will select only those anchors which have been visited once by the user by clicking on it and have an href attribute*/
   color: #1098ad;
 }
-a:hover { /*will apply on all anchor elements which are currently being hovered*/
+a:hover {
+  /*will apply on all anchor elements which are currently being hovered*/
   color: orangered;
   font-weight: bold;
   text-decoration: underline wavy orangered; /*here we can assign multiple values too line=underline , style of line = wavy and color of line = orangered */
 }
-a:active { /*all anchor elements which are clicked (till the duration of click only)*/
+a:active {
+  /*all anchor elements which are clicked (till the duration of click only)*/
   background-color: black;
   font-style: italic;
-
 }
 .post-img {
   width: 100%; /*% of width of the parent container of the element.The size of the image will remain 100% even if we stretch the webpage*/
@@ -177,10 +182,11 @@ nav a:link {
             padding: 20px;
             display:block; will make the elements block level elements*/
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
-nav a:link:last-child { /*chaining of pseudo classes is also allowed*/
+nav a:link:last-child {
+  /*chaining of pseudo classes is also allowed*/
   margin-right: 0;
 }
 button {
@@ -190,12 +196,12 @@ button {
   position: absolute;
   /* bottom:0;
         left:0;  these two above lines will make the button stick to the bottom left corner of the webpage */
-  bottom: 50px;/*by defualt these 50px are relative to view port(visible part of the webpage in the browser) and if position relative is set to any of it's parent then that parent is selected for reference */
+  bottom: 50px; /*by defualt these 50px are relative to view port(visible part of the webpage in the browser) and if position relative is set to any of it's parent then that parent is selected for reference */
   right: 50px;
 }
 h1::first-letter {
-  font-style:normal;
-  margin-right:5px;
+  font-style: normal;
+  margin-right: 5px;
 }
 /* h2::first-letter{
         font-size:50px; will change the size of T to 50px in the h2 "The Basic..."
@@ -209,7 +215,8 @@ h1::first-letter {
 h2 {
   position: relative; /*to position the TOP pseudo element*/
 }
-h2::before { /*before or after is used to add pseudo element as a very first child or very last child element respectively wrt to the element that is being selected without the need to code them in html*/
+h2::before {
+  /*before or after is used to add pseudo element as a very first child or very last child element respectively wrt to the element that is being selected without the need to code them in html*/
   content: "TOP"; /*content property is mandatory to specify in after and before pseudo elements though it can be empty strings too*/
   background-color: #ffe70e;
   color: #444;
@@ -222,13 +229,14 @@ h2::before { /*before or after is used to add pseudo element as a very first chi
   right: -25px;
 }
 
-/*Layouts*/
+/*layouts using Floats*/
+/*  
 .author-img
 {
-  float:left; /*the element will go out of flow and all the other elements will float around it.It will seem to act as if the elements is not even in the page.*/
+  float:left; the element will go out of flow and all the other elements will float around it.It will seem to act as if the elements is not even in the page.
 }
 .author{
-  /* padding-left:80px; */
+  padding-left:80px;
   float:left;
   margin-top:10px;
   margin-left:20px;
@@ -239,14 +247,13 @@ h1{
 nav{
   float:right;
 }
-/* .clear{
+.clear{
   clear:both; will clear both right and left floats for the selected element and thus the element will become in flow
-} */
-.clearfix:after{ /*to fix floats we add pseudo elements which will work same as div that we had created*/
+}
+.clearfix:after{ to fix floats we add pseudo elements which will work same as div that we had created
   clear:both; 
   content:"";
-  display: block; /*bcoz clearing floats only work on block elements*/
-} 
+  display: block;/
 article{
   width:825px;
   float:left;
@@ -257,4 +264,71 @@ aside{
 }
 footer{
   clear:both;
+}  */
+
+/*Flexbox */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*will take the empty space btwn the container and use it to occupy the space btwn the flex items*/
+}
+.author-box {
+  display:flex;
+  align-items: center;
+  margin-bottom:15px;
+}
+.author{
+  margin-bottom:0;
+  margin-left:15px;
+}
+.related-post{
+  display:flex;
+  align-items: center;
+  gap:20px;
+  margin-bottom: 30px;
+}
+.related-link{
+  font-size:17px;
+  font-weight: bold;
+  font-style:normal;
+  display: block; /*making it block to use margin-bottom bcoz anchor elements are inline elements by defualt*/
+  margin-bottom:5px;
+}
+.related-author{
+  margin-bottom:0;
+  font-size:14px;
+  font-weight: normal;
+  font-style:italic;
+}
+/* layout using Flexbox */
+/* .row{
+  display: flex;
+  align-items:flex-start;
+  gap:75px;
+  margin-bottom: 60px;
+}
+
+aside{
+  flex-basis:300px; we should use flex-basis instead of width for flex items
+  flex: 0 0 300px;
+}
+article{
+  flex: 0 0 825px;
+  flex:1; this does the same work as the above line by automatically assigning the available width to the article element to grow inside the container as much as the available space after gap and aside width
+  margin-bottom: 0;
+} */
+
+/*layout using  CSS GRIDS*/
+.container{
+display:grid; /*by default css grids places its item into rows*/
+grid-template-columns: 1fr 300px; /*here since there is only 1fr that means all the remaining space after 300px will be given to 1st column*/
+column-gap: 75px;
+row-gap: 60px;
+align-items:start;
+} 
+.main-header{
+grid-column: 1/-1;
+}
+footer{
+  grid-column: 1/-1;
 }
